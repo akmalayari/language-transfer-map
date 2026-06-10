@@ -6,7 +6,7 @@
 
 A Streamlit web app that estimates how easy each of 283 languages would be to learn given your current language portfolio. Input your languages and self-assessed proficiency levels (0–5), and get a ranked ease report with an interactive force-directed graph showing cross-linguistic transfer across lexical, grammatical, phonological, and script dimensions.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app.streamlit.app)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://language-transfer-map.streamlit.app)
 
 ## How it works
 
