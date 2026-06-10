@@ -1,0 +1,1037 @@
+# Script mapping — manually curated
+# difficulty: 1 (trivial) to 5 (very hard), from scratch with no prior script knowledge
+# type: alphabet | abjad | abugida | syllabary | logographic | mixed | featural
+# direction: ltr | rtl | ttb (top-to-bottom)
+
+scripts:
+
+  # --- Greek-derived family ---
+
+  latin:
+    name: Latin
+    type: alphabet
+    direction: ltr
+    difficulty: 1
+    family: greek-derived
+    notes: Most widespread script. Used by ~70 languages in this map.
+
+  cyrillic:
+    name: Cyrillic
+    type: alphabet
+    direction: ltr
+    difficulty: 2
+    family: greek-derived
+    notes: Derived directly from Greek. Many letters shared with Latin (A, E, K, M...) though some are false friends (P=R, H=N, C=S).
+
+  greek:
+    name: Greek
+    type: alphabet
+    direction: ltr
+    difficulty: 2
+    family: greek-derived
+    notes: Ancestor of Latin, Cyrillic, and Armenian. Some letter forms familiar to Latin readers (A, E, I, K, M, N, O, T).
+
+  armenian:
+    name: Armenian
+    type: alphabet
+    direction: ltr
+    difficulty: 3
+    family: greek-derived
+    notes: Derived from Greek ca. 405 AD. Fully independent letterforms — visual familiarity is minimal, but alphabetic concept transfers.
+
+  coptic:
+    name: Coptic
+    type: alphabet
+    direction: ltr
+    difficulty: 3
+    family: greek-derived
+    notes: Based on Greek letters + 6 Demotic characters. Liturgical only (Coptic Christian church). Effectively a Greek variant.
+
+  # --- Semitic abjads (RTL, consonantal) ---
+
+  arabic:
+    name: Arabic
+    type: abjad
+    direction: rtl
+    difficulty: 4
+    family: semitic
+    notes: Consonants only (vowels as optional diacritics). Cursive — letter forms change depending on position in word (initial/medial/final/isolated). Used for Arabic, Persian, Urdu, Pashto, Uyghur.
+
+  hebrew:
+    name: Hebrew
+    type: abjad
+    direction: rtl
+    difficulty: 4
+    family: semitic
+    notes: Consonants only (vowels as optional diacritics). Block letters, not cursive. Used for Hebrew and Yiddish.
+
+  syriac:
+    name: Syriac
+    type: abjad
+    direction: rtl
+    difficulty: 4
+    family: semitic
+    notes: Cursive Semitic abjad. Used for Assyrian, classical Syriac, and some modern Aramaic dialects.
+
+  # --- Brahmic abugidas (LTR, syllabic units: consonant + inherent vowel) ---
+  # Knowing any one Brahmic script transfers the structural concept to all others.
+  # Visual forms are entirely distinct between sub-families.
+
+  devanagari:
+    name: Devanagari
+    type: abugida
+    direction: ltr
+    difficulty: 3
+    family: brahmic
+    notes: Used for Hindi, Marathi, Nepali, Sanskrit. Horizontal top-bar connects letters. Most-studied Brahmic script — good gateway to the family.
+
+  bengali:
+    name: Bengali
+    type: abugida
+    direction: ltr
+    difficulty: 3
+    family: brahmic
+    notes: Used for Bengali and Assamese. Visually similar to Devanagari (same top-bar principle) but distinct letterforms.
+
+  gujarati:
+    name: Gujarati
+    type: abugida
+    direction: ltr
+    difficulty: 3
+    family: brahmic
+    notes: Like Devanagari without the top bar. Used for Gujarati.
+
+  gurmukhi:
+    name: Gurmukhi
+    type: abugida
+    direction: ltr
+    difficulty: 3
+    family: brahmic
+    notes: Used for Punjabi. Derived from Devanagari, top-bar retained.
+
+  tamil:
+    name: Tamil
+    type: abugida
+    direction: ltr
+    difficulty: 4
+    family: brahmic
+    notes: Dravidian branch of Brahmic. Rounder letterforms, fewer consonants than North Indian scripts. One of the oldest continuously used scripts.
+
+  telugu:
+    name: Telugu
+    type: abugida
+    direction: ltr
+    difficulty: 4
+    family: brahmic
+    notes: Dravidian. Rounded letterforms. Used for Telugu and historically for Sanskrit in South India.
+
+  kannada:
+    name: Kannada
+    type: abugida
+    direction: ltr
+    difficulty: 4
+    family: brahmic
+    notes: Dravidian. Closely related to Telugu visually.
+
+  malayalam:
+    name: Malayalam
+    type: abugida
+    direction: ltr
+    difficulty: 4
+    family: brahmic
+    notes: Dravidian. Highly curved letterforms. Used for Malayalam.
+
+  sinhala:
+    name: Sinhala
+    type: abugida
+    direction: ltr
+    difficulty: 4
+    family: brahmic
+    notes: Used for Sinhala (Sri Lanka). Very rounded letterforms.
+
+  thai:
+    name: Thai
+    type: abugida
+    direction: ltr
+    difficulty: 4
+    family: brahmic
+    notes: Tone markers as diacritics add a layer of complexity beyond other Brahmic scripts. No spaces between words.
+
+  lao:
+    name: Lao
+    type: abugida
+    direction: ltr
+    difficulty: 4
+    family: brahmic
+    notes: Closely related to Thai — same Brahmic branch, similar letterforms, similar tone diacritic system.
+
+  khmer:
+    name: Khmer
+    type: abugida
+    direction: ltr
+    difficulty: 4
+    family: brahmic
+    notes: Used for Cambodian. Large inventory of letters and subscript consonant forms make it visually dense.
+
+  burmese:
+    name: Burmese (Myanmar)
+    type: abugida
+    direction: ltr
+    difficulty: 4
+    family: brahmic
+    notes: Circular/oval letterforms. Used for Burmese, Shan, and other languages of Myanmar.
+
+  tibetan:
+    name: Tibetan
+    type: abugida
+    direction: ltr
+    difficulty: 5
+    family: brahmic
+    notes: Complex consonant stacking (vertical clusters). Significant gap between written and spoken form. Used for Tibetan and Dzongkha.
+
+  ethiopic:
+    name: Ethiopic (Ge'ez)
+    type: abugida
+    direction: ltr
+    difficulty: 3
+    family: brahmic-related
+    notes: >
+      Technically not Brahmic (independent origin from South Arabian) but functionally
+      an abugida — consonant+vowel syllabic units. ~276 base characters but highly regular.
+      Used for Amharic, Tigrinya, and other Ethiopian/Eritrean languages.
+
+  # --- Sino-Japanese logographic/syllabic cluster ---
+
+  chinese_simplified:
+    name: Chinese (Simplified)
+    type: logographic
+    direction: ltr
+    difficulty: 5
+    family: sino-japanese
+    notes: ~3000 characters for basic literacy, 5000+ for full fluency. Each character encodes meaning and sound. Used in mainland China, Singapore.
+
+  chinese_traditional:
+    name: Chinese (Traditional)
+    type: logographic
+    direction: ltr
+    difficulty: 5
+    family: sino-japanese
+    notes: More complex stroke forms than Simplified. Used in Taiwan, Hong Kong, and diaspora communities.
+
+  kanji:
+    name: Kanji (Japanese Chinese characters)
+    type: logographic
+    direction: ltr
+    difficulty: 5
+    family: sino-japanese
+    notes: ~2000 Joyo kanji for standard literacy. Borrowed from Chinese but with Japanese readings layered on top (on-yomi + kun-yomi). Used alongside Hiragana and Katakana.
+
+  hiragana:
+    name: Hiragana
+    type: syllabary
+    direction: ltr
+    difficulty: 2
+    family: sino-japanese
+    notes: 46 syllabic characters, all derived from cursive Kanji forms. Encodes native Japanese words and grammar. Regular, learnable in ~1 week.
+
+  katakana:
+    name: Katakana
+    type: syllabary
+    direction: ltr
+    difficulty: 2
+    family: sino-japanese
+    notes: 46 syllabic characters, angular forms derived from Kanji components. Used for loanwords, emphasis, scientific terms. Very regular.
+
+  # --- Independent/isolate scripts ---
+
+  georgian:
+    name: Georgian (Mkhedruli)
+    type: alphabet
+    direction: ltr
+    difficulty: 3
+    family: kartvelian
+    notes: One of three Georgian scripts (Mkhedruli is modern standard). 33 letters, each phoneme unique. No capital letters. Visually distinctive curves — no transfer from any other script.
+
+  hangul:
+    name: Hangul
+    type: featural
+    direction: ltr
+    difficulty: 2
+    family: koreanic
+    notes: >
+      Technically a featural alphabet — letter shapes encode phonetic features (labial,
+      coronal, etc.). Letters grouped into syllabic blocks. Designed in 1443, highly
+      systematic. ~40 characters, learnable in days. Zero transfer from any other script
+      but its internal logic is very consistent.
+
+  mongolian_traditional:
+    name: Mongolian (Traditional)
+    type: alphabet
+    direction: ttb
+    difficulty: 5
+    family: mongolic
+    notes: Written vertically top-to-bottom, columns left-to-right. Cursive — letters join and change form by position. Used in Inner Mongolia (China). Modern Mongolia uses Cyrillic.
+
+  mongolian_cyrillic:
+    name: Mongolian Cyrillic
+    type: alphabet
+    direction: ltr
+    difficulty: 2
+    family: greek-derived
+    notes: Standard script in Mongolia since 1940s. Standard Cyrillic + 2 extra letters (ӨӨ, ҮҮ). Fully readable to a Cyrillic-literate person with minimal adjustment.
+
+  tifinagh:
+    name: Tifinagh
+    type: alphabet
+    direction: ltr
+    difficulty: 3
+    family: berber
+    notes: Ancient script of the Berber/Amazigh peoples. Modern IRCAM Tifinagh standardized 2003. Used for Tamazight, Tarifit, Tachelhit.
+
+  n_ko:
+    name: N'Ko
+    type: alphabet
+    direction: rtl
+    difficulty: 3
+    family: mande
+    notes: Created 1949 for Mande languages of West Africa (Mandinka, Bambara, Dyula). RTL. Very regular and phonemic — systematic design similar to Hangul in philosophy.
+
+  ol_chiki:
+    name: Ol Chiki
+    type: alphabet
+    direction: ltr
+    difficulty: 3
+    family: austroasiatic
+    notes: Created 1925 for Santali (Austroasiatic, India). 30 letters. No relation to Devanagari despite geographic proximity.
+
+  syllabics:
+    name: Canadian Aboriginal Syllabics
+    type: abugida
+    direction: ltr
+    difficulty: 3
+    family: indigenous-americas
+    notes: Invented 1840 for Cree; extended to Inuktitut, Ojibwe, and other Canadian indigenous languages. No visual relation to any other script.
+
+  # --- Ancient / historical scripts ---
+
+  cuneiform:
+    name: Cuneiform
+    type: mixed
+    direction: ltr
+    difficulty: 5
+    family: ancient-near-eastern
+    notes: >
+      Oldest writing system (~3200 BCE). Logograms + syllabic signs: thousands of distinct signs
+      in full Sumerian/Akkadian. Hittite and Old Persian variants are somewhat simpler. Ugaritic
+      uses only ~30 alphabetic cuneiform signs. All require specialist training.
+
+  gothic_alphabet:
+    name: Gothic Alphabet (Ulfilas)
+    type: alphabet
+    direction: ltr
+    difficulty: 2
+    family: greek-derived
+    notes: >
+      Created ca. 350 AD by Bishop Ulfilas for Gothic Bible translation. ~27 letters, primarily
+      derived from Greek with some Latin and Runic borrowings. Greek literacy provides a strong
+      head start; Latin readers will recognise many forms.
+
+  brahmi:
+    name: Brahmi
+    type: abugida
+    direction: ltr
+    difficulty: 3
+    family: brahmic
+    notes: >
+      Ancestor of all Brahmic scripts (Devanagari, Bengali, Thai, Tibetan, Burmese...). Used in
+      Pali texts and Tocharian manuscripts. Knowing any modern Brahmic script gives partial transfer
+      — letter forms have drifted but the consonant+inherent-vowel logic is identical.
+
+  pahlavi:
+    name: Pahlavi (Middle Persian script)
+    type: abjad
+    direction: rtl
+    difficulty: 4
+    family: aramaic-derived
+    notes: >
+      Derived from Aramaic. Cursive, RTL, consonants only. Only ~18 distinct letter shapes encode
+      ~24 phonemes — heavy ambiguity requires strong contextual reading. Used for Middle Persian
+      and Parthian. Syriac readers have the clearest structural advantage.
+
+  sogdian_script:
+    name: Sogdian Script
+    type: abjad
+    direction: rtl
+    difficulty: 4
+    family: aramaic-derived
+    notes: >
+      Derived from Aramaic via Syriac lineage. Used for Sogdian merchant texts along the Silk Road.
+      Ancestor of Old Uyghur script, which became Mongolian Traditional. Some forms shared with
+      Pahlavi; Syriac gives the strongest transfer.
+
+  phoenician_script:
+    name: Phoenician Script
+    type: abjad
+    direction: rtl
+    difficulty: 3
+    family: semitic
+    notes: >
+      22 consonant signs, RTL, no vowels. Ancestor of Hebrew, Aramaic, Arabic, Greek, Latin, and
+      most world alphabets. Hebrew readers will find letter names and some forms ancestrally familiar.
+      Latin/Greek readers have a very distant conceptual relationship.
+
+  linear_b:
+    name: Linear B
+    type: syllabary
+    direction: ltr
+    difficulty: 4
+    family: aegean
+    notes: >
+      Mycenaean Greek syllabary (~1500–1200 BCE). ~90 syllabic signs + logograms. Deciphered 1952
+      (Ventris). No meaningful transfer from the Greek alphabet — same language, entirely unrelated
+      script. Requires specialist study.
+
+  old_turkic_runic:
+    name: Old Turkic Runic (Orkhon script)
+    type: alphabet
+    direction: rtl
+    difficulty: 3
+    family: turkic-runic
+    notes: >
+      Used in Orkhon/Yenisei inscriptions (6th–10th c.). ~38 letters, RTL. Visually resembles
+      Germanic runes but is unrelated. Encodes vowel-harmony vowel pairs as distinct letters —
+      front/back variants of the same consonant are separate signs.
+
+  etruscan_alphabet:
+    name: Etruscan Alphabet
+    type: alphabet
+    direction: rtl
+    difficulty: 2
+    family: greek-derived
+    notes: >
+      Derived from the Western (Euboean) Greek alphabet, ca. 700 BCE. The Latin alphabet was
+      adapted from Etruscan — many letter shapes are directly recognisable to Latin and Greek
+      readers. RTL direction is the main adjustment. ~26 letters.
+
+# ---------------------------------------------------------------------------
+# Transfer matrix
+# transfer[source][target] = how much knowing `source` reduces difficulty of `target`
+# 0.0 = no help, 1.0 = already mastered
+# Omitted pairs default to 0.0
+# ---------------------------------------------------------------------------
+
+transfer:
+
+  latin:
+    cyrillic: 0.5   # alphabetic concept + overlapping letter shapes (A E K M...)
+    greek:    0.4   # ancestor relationship — many root letter forms recognizable
+    armenian: 0.1   # alphabetic concept only
+    hebrew:   0.1   # concept of alphabet; direction and forms entirely different
+    arabic:   0.1   # writing system concept only
+    gothic_alphabet:    0.2   # some letter forms shared (Latin → Gothic borrowings)
+    etruscan_alphabet:  0.4   # Latin derived from Etruscan — forms very close
+    phoenician_script:  0.05  # extremely distant ancestor; no practical letter-form help
+
+  cyrillic:
+    latin:    0.5
+    greek:    0.6   # Cyrillic derived directly from Greek — more forms preserved than Latin
+    armenian: 0.1
+    mongolian_cyrillic: 0.9  # identical base + 2 extra letters
+
+  greek:
+    latin:    0.5
+    cyrillic: 0.6   # Cyrillic derived from Greek — learner recognizes the ancestor
+    armenian: 0.2   # Armenian derived from Greek, some structural echo
+    coptic:   0.8   # Coptic is Greek + a few extra characters
+    gothic_alphabet:   0.4   # Gothic derived from Greek — many letter forms preserved
+    etruscan_alphabet: 0.5   # Etruscan is a Western Greek alphabet variant — very close
+    linear_b:          0.1   # same language, but scripts entirely unrelated
+
+  armenian:
+    greek:    0.2
+    latin:    0.1
+    cyrillic: 0.1
+
+  coptic:
+    greek:    0.7
+
+  arabic:
+    hebrew:   0.4   # both RTL Semitic abjads — directionality and consonantal logic transfer
+    syriac:   0.5   # closely related Semitic abjad, cursive, RTL
+    latin:    0.1   # reverse: knowing Arabic gives minimal help with Latin
+    pahlavi:          0.15  # RTL abjad concept transfers; letter forms very different
+    sogdian_script:   0.10  # same conceptual family; different forms
+    phoenician_script: 0.2  # Semitic abjad ancestor — RTL + consonantal logic recognised
+
+  hebrew:
+    arabic:   0.4
+    syriac:   0.3
+    phoenician_script: 0.4  # Hebrew evolved directly from Phoenician — letter names identical
+    pahlavi:           0.1  # both RTL abjads; forms very different
+
+  syriac:
+    arabic:   0.4
+    hebrew:   0.3
+    pahlavi:         0.3   # Pahlavi derived from Aramaic — same family, partially shared forms
+    sogdian_script:  0.2   # Sogdian also Aramaic-derived; Syriac gives clearest head start
+
+  devanagari:
+    bengali:     0.5  # same top-bar principle, similar letterforms
+    gujarati:    0.5  # Devanagari without top bar — very similar
+    gurmukhi:    0.4  # derived from Devanagari
+    tamil:       0.3  # abugida concept transfers, visual forms very different
+    telugu:      0.3
+    kannada:     0.3
+    malayalam:   0.3
+    sinhala:     0.2
+    thai:        0.3  # abugida concept transfers
+    lao:         0.3
+    khmer:       0.2
+    burmese:     0.2
+    tibetan:     0.3  # also Brahmic, but stacking adds complexity
+    ethiopic:    0.2  # abugida concept transfers across independent origin
+    brahmi:      0.4  # Devanagari descends from Brahmi — reversed ancestor relationship; forms drifted
+
+  bengali:
+    devanagari:  0.5
+    gujarati:    0.4
+    gurmukhi:    0.3
+    tamil:       0.3
+    thai:        0.2
+    tibetan:     0.2
+    brahmi:      0.3  # ancestor script; structural concept transfers
+
+  gujarati:
+    devanagari:  0.5
+    bengali:     0.4
+    gurmukhi:    0.4
+
+  gurmukhi:
+    devanagari:  0.4
+    gujarati:    0.4
+    bengali:     0.3
+
+  tamil:
+    telugu:      0.4
+    kannada:     0.4
+    malayalam:   0.4
+    devanagari:  0.2
+    thai:        0.2
+
+  telugu:
+    kannada:     0.5  # visually very close
+    tamil:       0.4
+    malayalam:   0.3
+
+  kannada:
+    telugu:      0.5
+    tamil:       0.4
+    malayalam:   0.3
+
+  malayalam:
+    tamil:       0.4
+    kannada:     0.3
+    telugu:      0.3
+
+  thai:
+    lao:         0.5  # closely related — same branch, similar letterforms
+    khmer:       0.3
+    devanagari:  0.2
+    burmese:     0.2
+
+  lao:
+    thai:        0.5
+    khmer:       0.3
+
+  khmer:
+    thai:        0.3
+    lao:         0.3
+    burmese:     0.2
+
+  burmese:
+    thai:        0.2
+    khmer:       0.2
+
+  tibetan:
+    devanagari:  0.3
+    bengali:     0.2
+
+  ethiopic:
+    devanagari:  0.1  # abugida concept only — independent origin
+
+  chinese_simplified:
+    chinese_traditional: 0.8  # same characters, simplified forms
+    kanji:               0.7  # large overlap — Japanese borrowed Chinese characters
+    hiragana:            0.0
+    katakana:            0.0
+
+  chinese_traditional:
+    chinese_simplified:  0.8
+    kanji:               0.8  # Traditional Chinese closer to Kanji forms than Simplified
+    hiragana:            0.0
+    katakana:            0.0
+
+  kanji:
+    chinese_simplified:  0.6
+    chinese_traditional: 0.7
+    hiragana:            0.3  # Hiragana derived from cursive Kanji
+    katakana:            0.3  # Katakana derived from Kanji components
+
+  hiragana:
+    katakana:  0.7  # same phonemic coverage, different visual system
+    kanji:     0.1  # knowing Hiragana gives no real head start on Kanji
+
+  katakana:
+    hiragana:  0.7
+    kanji:     0.1
+
+  mongolian_cyrillic:
+    cyrillic:  0.8  # reverse: knowing Mongolian Cyrillic helps standard Cyrillic
+
+  # --- Historical / ancient script transfers ---
+
+  gothic_alphabet:
+    greek:  0.2   # Gothic derived from Greek — learner who knows Gothic will recognise Greek root
+    latin:  0.1
+
+  brahmi:
+    devanagari:  0.4  # Devanagari descends from Brahmi — structural logic fully shared
+    bengali:     0.3
+    gujarati:    0.3
+    gurmukhi:    0.3
+    tamil:       0.2
+
+  pahlavi:
+    arabic:         0.1  # RTL abjad concept; letter forms very different
+    syriac:         0.2  # same Aramaic-family lineage
+    sogdian_script: 0.3  # Sogdian partially shares Pahlavi letter forms
+
+  sogdian_script:
+    pahlavi:  0.2
+    arabic:   0.05
+
+  phoenician_script:
+    hebrew:  0.3  # Hebrew evolved from Phoenician — some ancestral letter forms survive
+    arabic:  0.1
+    latin:   0.05  # extremely distant; conceptual only
+
+  etruscan_alphabet:
+    latin:   0.3  # Latin derived from Etruscan — reversed ancestor relationship
+    greek:   0.3
+
+  # linear_b, cuneiform, old_turkic_runic: no meaningful transfer out
+
+# ---------------------------------------------------------------------------
+# Language → script mapping
+# Most languages use one script. Some use multiple (Serbian, Japanese, Kazakh...).
+# ---------------------------------------------------------------------------
+
+language_scripts:
+
+  # Romance
+  French:        [latin]
+  Spanish:       [latin]
+  Portuguese:    [latin]
+  Italian:       [latin]
+  Romanian:      [latin]
+  Catalan:       [latin]
+  Galician:      [latin]
+  Occitan:       [latin]
+  Sardinian:     [latin]
+
+  # Germanic
+  English:       [latin]
+  German:        [latin]
+  Dutch:         [latin]
+  Swedish:       [latin]
+  Norwegian:     [latin]
+  Danish:        [latin]
+  Icelandic:     [latin]
+  Afrikaans:     [latin]
+  Luxembourgish: [latin]
+  Yiddish:       [hebrew]
+
+  # Celtic
+  Breton:        [latin]
+  Welsh:         [latin]
+  Irish:         [latin]
+  Scottish Gaelic: [latin]
+
+  # Slavic
+  Russian:       [cyrillic]
+  Ukrainian:     [cyrillic]
+  Bulgarian:     [cyrillic]
+  Macedonian:    [cyrillic]
+  Serbian:       [cyrillic, latin]   # both scripts officially
+  Bosnian:       [latin, cyrillic]
+  Croatian:      [latin]
+  Slovenian:     [latin]
+  Polish:        [latin]
+  Czech:         [latin]
+  Slovak:        [latin]
+  Belarusian:    [cyrillic]
+
+  # Baltic
+  Lithuanian:    [latin]
+  Latvian:       [latin]
+
+  # Greek
+  Greek:         [greek]
+
+  # Albanian
+  Albanian:      [latin]
+
+  # Armenian
+  Armenian:      [armenian]
+
+  # Indo-Iranian
+  Hindi:         [devanagari]
+  Nepali:        [devanagari]
+  Marathi:       [devanagari]
+  Sanskrit:      [devanagari]
+  Urdu:          [arabic]           # Arabic-Perso script
+  Persian:       [arabic]
+  Pashto:        [arabic]
+  Bengali:       [bengali]
+  Assamese:      [bengali]
+  Punjabi:       [gurmukhi, arabic] # Gurmukhi in India, Shahmukhi (Arabic) in Pakistan
+  Gujarati:      [gujarati]
+  Sinhala:       [sinhala]
+  Kurdish:       [latin, arabic]    # Latin in Turkey/Europe, Arabic in Iraq/Iran
+
+  # Dravidian
+  Tamil:         [tamil]
+  Telugu:        [telugu]
+  Kannada:       [kannada]
+  Malayalam:     [malayalam]
+
+  # Semitic
+  Standard Arabic: [arabic]
+  Tunisian Arabic: [arabic]
+  Egyptian Arabic: [arabic]
+  Levantine Arabic: [arabic]
+  Moroccan Arabic: [arabic]
+  Gulf Arabic:   [arabic]
+  Hebrew:        [hebrew]
+  Amharic:       [ethiopic]
+  Tigrinya:      [ethiopic]
+  Maltese:       [latin]
+
+  # Turkic
+  Turkish:       [latin]
+  Azerbaijani:   [latin]
+  Uzbek:         [latin, cyrillic]   # transitioning from Cyrillic to Latin
+  Kazakh:        [cyrillic, latin]   # transitioning — Cyrillic traditional, Latin new standard
+  Kyrgyz:        [cyrillic]
+  Tatar:         [cyrillic, latin]   # Cyrillic in Russia, Latin proposed
+  Uyghur:        [arabic, cyrillic, latin]  # Arabic in China, Cyrillic in ex-Soviet
+  Turkmen:       [latin]
+  Bashkir:       [cyrillic]
+
+  # Mongolic
+  Mongolian:     [cyrillic, mongolian_traditional]  # Cyrillic in Mongolia, traditional in Inner Mongolia
+
+  # Koreanic
+  Korean:        [hangul]
+  Middle Korean: [hangul]   # Early Hangul (Hunminjeongeum, 1443) — same script, no barrier
+
+  # Japonic
+  Japanese:      [hiragana, katakana, kanji]
+  Okinawan:      [hiragana, katakana, kanji]   # same writing system as Japanese
+
+  # Sino-Tibetan
+  Chinese:       [chinese_simplified]
+  Mandarin:      [chinese_simplified]
+  Cantonese:     [chinese_traditional]
+  Wu:            [chinese_simplified]
+  Hakka:         [chinese_simplified]
+  Min Nan:       [chinese_simplified, latin]  # Chinese characters primary, Pe̍h-ōe-jī romanization secondary
+  Tibetan:       [tibetan]
+  Burmese:       [burmese]
+
+  # Austronesian
+  Indonesian:    [latin]
+  Malay:         [latin]
+  Tagalog:       [latin]
+  Javanese:      [latin]
+  Malagasy:      [latin]
+  Cebuano:       [latin]
+  Sundanese:     [latin]
+  Hawaiian:      [latin]
+  Maori:         [latin]
+  Samoan:        [latin]
+
+  # Tai-Kadai
+  Thai:          [thai]
+  Lao:           [lao]
+
+  # Austroasiatic
+  Vietnamese:    [latin]   # Latin + diacritics (tone marks)
+  Khmer:         [khmer]
+
+  # Kartvelian
+  Georgian:      [georgian]
+
+  # Khoisan / click languages
+  Zulu:          [latin]
+  Xhosa:         [latin]
+
+  # Niger-Congo
+  Swahili:       [latin]
+  Yoruba:        [latin]
+  Igbo:          [latin]
+  Hausa:         [latin, arabic]  # Latin standard, Ajami (Arabic) traditional
+  Wolof:         [latin]
+  Bambara:       [latin, n_ko]
+  Kinyarwanda:   [latin]
+  Shona:         [latin]
+  Lingala:       [latin]
+  Chichewa:      [latin]
+  Tswana:        [latin]
+  Luganda:       [latin]
+
+  # Afroasiatic (non-Semitic)
+  Somali:        [latin]
+  Oromo:         [latin]
+  Tamazight:     [tifinagh, latin, arabic]
+
+  # Uralic
+  Finnish:       [latin]
+  Estonian:      [latin]
+  Hungarian:     [latin]
+
+  # Caucasian
+  Chechen:       [cyrillic]
+  Avar:          [cyrillic]
+  Abkhaz:        [cyrillic]
+
+  # Native American
+  Navajo:        [latin]
+  Cherokee:      [latin]    # Cherokee syllabary exists but Latin is standard
+  Nahuatl:       [latin]
+  Mapuche:       [latin]
+  Yupik:         [latin, cyrillic]  # Latin in Alaska, Cyrillic in Russia
+  Kiche:         [latin]
+  Quechua:       [latin]
+
+  # Siberian / Paleosiberian
+  Evenki:        [cyrillic]
+  Chukchi:       [cyrillic]
+  Ainu:          [latin, katakana]
+  Yakut:         [cyrillic]
+  Ket:           [cyrillic]
+  Nivkh:         [cyrillic]
+
+  # Arabic dialects
+  Egyptian Arabic:   [arabic]
+  Levantine Arabic:  [arabic]
+  Moroccan Arabic:   [arabic]
+  Gulf Arabic:       [arabic]
+
+  # Additional Germanic
+  Faroese:       [latin]
+
+  # Creoles
+  Haitian Creole: [latin]
+  Tok Pisin:     [latin]
+
+  # Constructed / isolates
+  Esperanto:     [latin]
+  Basque:        [latin]
+  Latin:         [latin]
+
+  # --- New languages (expansion June 2026) ---
+
+  # IE living
+  Bhojpuri:          [devanagari]
+  Kashmiri:          [arabic, devanagari]   # Nastaliq dominant; Devanagari official in India
+  Maithili:          [devanagari]           # Tirhuta exists but Devanagari is standard
+  Ossetic:           [cyrillic]
+  Western Armenian:  [armenian]
+
+  # IE historical — Latin-script (authentic attested script)
+  Cornish:           [latin]
+  Old English:       [latin]                # Latin script in manuscripts; Anglo-Saxon futhorc runic marginal
+  Old Norse:         [latin]                # Eddas/Sagas in Latin script; runic marginal
+  Old Irish:         [latin]                # primary texts in Latin script; Ogham marginal
+  Old High German:   [latin]
+  Anglo-Norman:      [latin]
+  Middle High German: [latin]
+  Middle Dutch:      [latin]
+  Middle Welsh:      [latin]
+  Middle Breton:     [latin]
+  Old Spanish:       [latin]
+  Old Prussian:      [latin]
+  Gaulish:           [latin]                # attested in both Greek and Latin scripts; Latin dominant
+
+  # IE historical — non-Latin scripts
+  Gothic:            [gothic_alphabet]
+  Ancient Greek:     [greek]
+  Classical Armenian: [armenian]
+  Pali:              [brahmi]               # original attested script; modern study uses devanagari/roman
+  Middle Persian:    [pahlavi]
+  Old Novgorod:      [cyrillic]
+  Rusyn:             [cyrillic]
+  Sogdian:           [sogdian_script]
+  Old Persian:       [cuneiform]
+  Hittite:           [cuneiform]
+  Tocharian A:       [brahmi]
+  Tocharian B:       [brahmi]
+  Mycenaean Greek:   [linear_b]
+  Oscan:             [etruscan_alphabet]    # Oscan alphabet is a Western Greek variant like Etruscan
+
+  # Austronesian (new)
+  Hiligaynon:        [latin]
+  Minangkabau:       [latin]
+  Acehnese:          [latin]
+  Kapampangan:       [latin]
+  Iban:              [latin]
+  Toba Batak:        [latin]
+  Tahitian:          [latin]
+  Tausug:            [arabic, latin]        # Jawi traditional; Latin modern standard
+  Paiwan:            [latin]
+
+  # Bantu (new)
+  Kikuyu:            [latin]
+  Kikongo:           [latin]
+  Rukiga:            [latin]
+  Ndebele:           [latin]
+  Runyankore:        [latin]
+
+  # Tibeto-Burman (new)
+  Garo:              [latin]
+  Mizo:              [latin]
+  Lisu:              [latin]                # Fraser script is a Latin-extended system
+  Chin Hakha:        [latin]
+
+  # Sino-Tibetan historical
+  Old Chinese:       [chinese_traditional]  # Oracle bone → bronze → seal → traditional characters
+  Old Tibetan:       [tibetan]
+  Old Burmese:       [burmese]
+  Old Japanese:      [hiragana, katakana, kanji]  # Man'yōgana → kana system
+
+  # Austroasiatic (new)
+  Mon:               [burmese]              # Mon script is Brahmic, ancestrally close to Burmese
+  Mundari:           [ol_chiki]
+  Khasi:             [latin]
+
+  # Tupian
+  Guaraní:           [latin]
+
+  # Ethiopic Semitic
+  Ge'ez:             [ethiopic]
+  Tigre:             [ethiopic]
+
+  # Arabic dialects (new)
+  Iraqi Arabic:      [arabic]
+  Yemeni Arabic:     [arabic]
+  Chadian Arabic:    [arabic]
+
+  # Quechuan
+  Imbabura Quechua:  [latin]
+
+  # Dravidian (new)
+  Tulu:              [kannada]              # Tulu script marginal; Kannada used in practice
+
+  # Turkic historical
+  Old Turkic:        [old_turkic_runic]
+
+  # Mayan (new)
+  Kaqchikel:         [latin]
+  Mam:               [latin]
+  Tzotzil:           [latin]
+  "Q'eqchi'":        [latin]
+  Tzeltal:           [latin]
+  Huastec:           [latin]
+
+  # Ancient Semitic
+  Akkadian:          [cuneiform]
+  Phoenician:        [phoenician_script]
+  Ugaritic:          [cuneiform]            # alphabetic cuneiform (~30 signs); still cuneiform strokes
+  Classical Syriac:  [syriac]
+  Coptic:            [coptic]
+
+  # Paleoeuropean
+  Etruscan:          [etruscan_alphabet]
+  Umbrian:           [etruscan_alphabet]  # Umbrian script is a Western Greek/Etruscan variant
+
+  # Ancient Mesopotamian
+  Sumerian:          [cuneiform]
+  Elamite:           [cuneiform]
+
+  # --- Script corrections and additions (June 2026) ---
+
+  # Berber (Afroasiatic)
+  Kabyle:            [tifinagh, latin, arabic]
+  Tachelhit:         [tifinagh, latin, arabic]
+
+  # NE Caucasian
+  Lezgi:             [cyrillic]
+  Ingush:            [cyrillic]
+  Lak:               [cyrillic]
+  Dargi:             [cyrillic]
+
+  # NW Caucasian (older entries missing)
+  Adyghe:            [cyrillic]
+  Kabardian:         [cyrillic]
+
+  # Kartvelian
+  Mingrelian:        [georgian]
+  Svan:              [georgian]
+  Laz:               [latin, georgian]   # Latin in Turkey; Georgian script in Georgia
+
+  # Turkic (missing entries)
+  "Azerbaijani (S.)": [arabic]           # Southern Azerbaijani in Iran — Perso-Arabic script
+  Chuvash:           [cyrillic]
+  Khakas:            [cyrillic]
+  Tuvan:             [cyrillic]
+
+  # Mongolic (missing entries)
+  Buryat:            [cyrillic]
+  Kalmyk:            [cyrillic]
+
+  # Uralic — Finno-Permic (missing entries)
+  Erzya:             [cyrillic]
+  Komi:              [cyrillic]
+  Mari:              [cyrillic]
+  Udmurt:            [cyrillic]
+
+  # Uralic — Samoyedic
+  Nenets:            [cyrillic]
+  Nganasan:          [cyrillic]
+  Selkup:            [cyrillic]
+  Kamas:             [cyrillic]          # extinct; documented in Cyrillic
+
+  # Uralic — Ugric
+  Khanty:            [cyrillic]
+  Mansi:             [cyrillic]
+
+  # Uralic — Saami
+  Kildin Saami:      [cyrillic]          # Russian Saami; Cyrillic-based script since 1980s
+
+  # Yukaghir
+  Yukaghir:          [cyrillic]
+  Kolyma Yukaghir:   [cyrillic]
+
+  # Tungusic (missing entries)
+  Even:              [cyrillic]
+  Nanai:             [cyrillic]
+
+  # Chukotko-Kamchatkan (missing entry)
+  Koryak:            [cyrillic]
+
+  # Iranian
+  Kurmanji:          [latin, arabic]     # Latin in Turkey/Europe; Arabic in Iraq/Iran
+
+  # Cushitic
+  Beja:              [arabic, latin]     # Arabic traditional; Latin increasingly used
+
+  # Nilo-Saharan
+  Kanuri:            [arabic, latin]     # Kanuri Ajami (Arabic) traditional; Latin modern standard
+
+  # Dravidian
+  Brahui:            [arabic]            # spoken in Pakistan; uses Perso-Arabic Nastaliq
+
+  # Native American
+  Cree:              [latin, syllabics]  # Cree syllabics widely used; Latin in modern resources
+  Inuktitut:         [latin, syllabics]  # Canadian syllabics; Latin also in use

@@ -1,0 +1,10 @@
+data/*
+!data/app_bundle/
+!data/app_bundle/**
+venv/
+__pycache__/
+*.pyc
+.streamlit/
+CLAUDE.md
+AGENTS.md
+TODO.md
