@@ -719,12 +719,31 @@ def compute_script(
     target_logographic = [s for s in target_scripts if s in logographic_scripts]
 
     if target_logographic:
+        # BUG FIX (2026-06-11): build full script-level map from the entire portfolio,
+        # including the target language itself. The `known_scripts` set above intentionally
+        # excludes the target by ISO (correct for script *access*), but that exclusion
+        # breaks the penalty when the target is already in the portfolio:
+        #   - Chinese L5 → Mandarin: Mandarin excluded → no logographic known → 0.7 penalty (wrong)
+        #   - Chinese L5 → Wu: different ISO so Chinese IS included, but transfer matrix has no
+        #     self-entry for chinese_simplified→chinese_simplified → 0.7 penalty (wrong)
+        # Fix: build full_logo_levels without ISO exclusion; add a direct-match path that
+        # short-circuits without the transfer matrix when the learner already knows the script.
+        full_logo_levels: dict[str, float] = {}
+        for name, level in portfolio.items():
+            if level <= 0:
+                continue
+            for s in lang_scripts_map.get(name, []):
+                full_logo_levels[s] = max(full_logo_levels.get(s, 0), level)
+
         best_logo_transfer = 0.0
         for ts in target_logographic:
-            for ks in known_scripts:
+            # Direct: already know this exact logographic script (no transfer loss)
+            if ts in full_logo_levels:
+                best_logo_transfer = max(best_logo_transfer, full_logo_levels[ts] / 5.0)
+            # Transfer: know a related logographic script (e.g. Chinese → Kanji)
+            for ks, ks_level in full_logo_levels.items():
                 if ks in logographic_scripts or ks in ("hiragana", "katakana"):
                     t = transfer_matrix.get(ks, {}).get(ts, 0.0)
-                    ks_level = known_scripts_levels.get(ks, 0)
                     best_logo_transfer = max(best_logo_transfer, t * ks_level / 5.0)
         script_penalty = 1.0 - 0.3 * (1.0 - best_logo_transfer)
         notes = f"logographic penalty: x{script_penalty:.2f}"
