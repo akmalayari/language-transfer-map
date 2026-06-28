@@ -589,6 +589,29 @@ body { background: #0d1117; color: #c9d1d9; font-family: -apple-system, system-u
     background: #161b22cc; border: 1px solid #30363d; border-radius: 8px;
     padding: 8px 20px; font-size: 13px; text-align: center; white-space: nowrap;
 }
+
+#toggle-families, #toggle-controls {
+    display: none;
+    position: absolute;
+    width: 36px; height: 36px;
+    background: #161b22cc; border: 1px solid #30363d;
+    border-radius: 8px; cursor: pointer;
+    align-items: center; justify-content: center;
+    font-size: 18px; color: #c9d1d9; z-index: 10;
+}
+#toggle-families { top: 16px; left: 16px; }
+#toggle-controls { top: 16px; right: 16px; }
+.panel-close {
+    display: none; background: none; border: none;
+    color: #8b949e; cursor: pointer; font-size: 15px; line-height: 1;
+}
+@media (max-width: 600px) {
+    #toggle-families, #toggle-controls { display: flex; }
+    #family-panel { display: none; max-height: 80vh; overflow-y: auto; z-index: 50; }
+    #controls { display: none; z-index: 50; }
+    #family-panel.open, #controls.open { display: block; }
+    .panel-close { display: inline-block; }
+}
 </style>
 </head>
 <body>
@@ -596,10 +619,14 @@ body { background: #0d1117; color: #c9d1d9; font-family: -apple-system, system-u
 <svg id="graph"></svg>
 <div id="tooltip"></div>
 
+<button id="toggle-families" title="Filters">&#9776;</button>
+<button id="toggle-controls" title="Controls">&#9881;</button>
+
 <div id="family-panel">
     <div class="panel-header">
         <h3>Families</h3>
         <button class="ghost-btn" id="family-reset">Show all</button>
+        <button class="panel-close" id="close-families">&#x2715;</button>
     </div>
     <div id="family-buttons"></div>
     <div class="panel-divider"></div>
@@ -614,6 +641,7 @@ body { background: #0d1117; color: #c9d1d9; font-family: -apple-system, system-u
 </div>
 
 <div id="controls">
+    <button class="panel-close" id="close-controls" style="float:right;margin-bottom:4px;">&#x2715;</button>
     <label>Link &ge; <input type="range" id="threshold" min="30" max="80" value="50"> <span class="val" id="threshold-val">0.50</span></label>
     <label>Ease &ge; <input type="range" id="ease-threshold" min="0" max="95" value="0"> <span class="val" id="ease-val">0.00</span></label>
     <label>Cluster: <input type="range" id="cluster-strength" min="0" max="30" value="10"> <span class="val" id="cluster-val">0.10</span></label>
@@ -829,6 +857,11 @@ document.getElementById("cluster-strength").oninput = function() {
 };
 
 document.getElementById("zoom-fit").onclick = () => zoomToVisible(nodes.filter(isNodeVisible));
+
+document.getElementById("toggle-families").onclick = () => document.getElementById("family-panel").classList.toggle("open");
+document.getElementById("toggle-controls").onclick = () => document.getElementById("controls").classList.toggle("open");
+document.getElementById("close-families").onclick = () => document.getElementById("family-panel").classList.remove("open");
+document.getElementById("close-controls").onclick = () => document.getElementById("controls").classList.remove("open");
 
 const tooltip = document.getElementById("tooltip");
 
